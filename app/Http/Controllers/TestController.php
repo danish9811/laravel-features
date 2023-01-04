@@ -22,37 +22,12 @@ class TestController extends Controller {
      */
     private function createHashes() {
         return [
-            Hash::make($this->createRandomLetteredString(random_int(20, 99))),
             Hash::make(random_int(120, 200)),
             Hash::make(random_int(130, 200)),
             Hash::make(random_int(140, 200)),
             Hash::make(random_int(150, 200)),
             Hash::make(random_int(190, 200)),
         ];
-    }
-
-    /**
-     * @throws Exception
-     */
-    private function createRandomLetteredString(int $strLength = 10) {
-        $str = '';
-        $masterStringLength = strlen($this->letters);
-        for ($i = 0; $i < $strLength; $i++)
-            $str .= $this->letters[random_int(0, $masterStringLength)];
-        return $str;
-    }
-
-    public function sampleMethod() {
-        return 'hello world';
-    }
-
-    public function printTable(int $num = 10, int $limit = 10) {
-        for ($i = 1; $i <= $limit; $i++)
-            echo $num . ' x ' . $i . ' = ' . ($i * $num) . '<br>';
-    }
-
-    public function anotherDemoMethod() {
-        return 'hello worldddddd';
     }
 
 }
