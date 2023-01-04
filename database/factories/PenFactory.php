@@ -4,20 +4,13 @@ namespace Database\Factories;
 
 use Illuminate\Database\Eloquent\Factories\Factory;
 
-/**
- * @extends \Illuminate\Database\Eloquent\Factories\Factory<\App\Models\Pen>
- */
-class PenFactory extends Factory
-{
-    /**
-     * Define the model's default state.
-     *
-     * @return array<string, mixed>
-     */
-    public function definition()
-    {
+class PenFactory extends Factory {
+
+    public function definition() {
         return [
-            //
+            'name' => $this->faker->name,
+            'weight' => $this->faker->randomFloat(2, 20, 40),
+            'color' => $this->faker->colorName()
         ];
     }
 }
