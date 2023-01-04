@@ -4,6 +4,7 @@ namespace Database\Factories;
 
 use Illuminate\Database\Eloquent\Factories\Factory;
 use App\Models\Book;
+use Illuminate\Support\Facades\Hash;
 
 /**
  * @extends \Illuminate\Database\Eloquent\Factories\Factory<\App\Models\Book>
@@ -17,9 +18,9 @@ class BookFactory extends Factory {
     public function definition() {
         return [
 
-            'title' => $this->faker->word(),
+            'title' => $this->faker->title(),
             'author' => $this->faker->name(),
-            'publisher_id' => $this->faker->numberBetween(1000, 9999),
+            'publisher_id' => $this->faker->randomNumber(4),
             'isbn' => $this->faker->isbn13(),
             'price' => $this->faker->randomFloat(2, 20, 90)
 
