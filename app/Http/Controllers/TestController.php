@@ -7,6 +7,9 @@ use Illuminate\Support\Facades\Hash;
 use JetBrains\PhpStorm\NoReturn;
 
 class TestController extends Controller {
+
+    private string $letters = 'abcdefghijklmnopqrstuvwxyz0123456789';
+
     /**
      * @throws Exception
      */
@@ -28,20 +31,12 @@ class TestController extends Controller {
         ];
     }
 
-    private function lines() {
-        return [
-            'line wri234234tten by fixes branch',
-            'line writ234234ten by fixes branch',
-            'line writt234234en by main branch',
-            'line writt234234en by main branch',
-            'line writ234234ten by main branch',
-            'line writ234234ten by main branch',
-            'line writ234234ten by main branch',
-            'line writ234234ten by main branch',
-            'line writ234234ten by main branch',
-            'line writ234234ten by main branch',
-            'line writ234234ten by main branch',
-        ];
+    private function createRandomLetteredString(int $strLength = 10) {
+        $str = '';
+        $masterStringLength = strlen($this->letters);
+        for ($i = 0; $i < $strLength; $i++)
+            $str .= $this->letters[random_int(0, $masterStringLength)];
+        return $str;
     }
 
 }
