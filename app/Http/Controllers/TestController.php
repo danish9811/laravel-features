@@ -28,18 +28,6 @@ class TestController extends Controller {
         ];
     }
 
-    // main main main main main main
-    // main _______________________
-    // main main main main main main
-    // main ______________________
-    // main ______________________
-    // main ______________________
-    // main ______________________
-    // main ______________________
-    // main ______________________
-
-
-
     private function lines() {
         return [
             'line written by fixes branch',
