@@ -22,7 +22,7 @@ class TestController extends Controller {
      */
     private function createHashes() {
         return [
-            Hash::make(random_int(100, 200)),
+            Hash::make($this->createRandomLetteredString(random_int(20, 99))),
             Hash::make(random_int(120, 200)),
             Hash::make(random_int(130, 200)),
             Hash::make(random_int(140, 200)),
@@ -31,6 +31,9 @@ class TestController extends Controller {
         ];
     }
 
+    /**
+     * @throws Exception
+     */
     private function createRandomLetteredString(int $strLength = 10) {
         $str = '';
         $masterStringLength = strlen($this->letters);
