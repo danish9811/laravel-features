@@ -28,4 +28,13 @@ class TestController extends Controller {
         ];
     }
 
+    private function lines() {
+        return [
+          'line written by fixes branch',
+          'line written by fixes branch'
+        ];
+    }
+
+
+
 }
