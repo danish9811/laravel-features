@@ -51,4 +51,8 @@ class TestController extends Controller {
             echo $num . ' x ' . $i . ' = ' . ($i * $num) . '<br>';
     }
 
+    public function anotherDemoMethod() {
+        return 'hello worldddddd';
+    }
+
 }
