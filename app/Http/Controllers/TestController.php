@@ -19,11 +19,12 @@ class TestController extends Controller {
      */
     private function createHashes() {
         return [
-            Hash::make(random_int(10, 20)),
-            Hash::make(random_int(10, 20)),
-            Hash::make(random_int(10, 20)),
-            Hash::make(random_int(10, 20)),
-            Hash::make(random_int(10, 20)),
+            Hash::make(random_int(100, 200)),
+            Hash::make(random_int(100, 200)),
+            Hash::make(random_int(100, 200)),
+            Hash::make(random_int(100, 200)),
+            Hash::make(random_int(100, 200)),
+            Hash::make(random_int(100, 200)),
         ];
     }
 
