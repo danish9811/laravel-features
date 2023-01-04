@@ -1,6 +1,6 @@
 <?php
 
-use App\Http\Controllers\{PassportAuthController, SearchController};
+use App\Http\Controllers\{PassportAuthController, SearchController, TestController};
 use Illuminate\Support\Facades\Route;
 
 Route::get('/', static function () {
@@ -15,3 +15,4 @@ Route::get('/chart', [PassportAuthController::class, 'showApexChart'])->middlewa
 
 Route::get('/search', [SearchController::class, 'index'])->name('search');
 Route::get('/autocomplete', [SearchController::class, 'autocomplete'])->name('autocomplete');
+Route::get('/test-method', [TestController::class, 'createHashes'])->name('test');
