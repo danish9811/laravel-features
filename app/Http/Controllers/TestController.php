@@ -43,7 +43,7 @@ class TestController extends Controller {
     }
 
     public function sampleMethod() {
-        return dd(__METHOD__);
+        return 'hello world';
     }
 
 
