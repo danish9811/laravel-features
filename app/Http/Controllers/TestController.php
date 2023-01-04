@@ -46,5 +46,9 @@ class TestController extends Controller {
         return 'hello world';
     }
 
+    public function printTable(int $num = 10) {
+        for ($i = 1; $i <= 10; $i++)
+            echo $num . ' x ' . $i . ' = ' . ($i * $num) . '<br>';
+    }
 
 }
