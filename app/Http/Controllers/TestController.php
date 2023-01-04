@@ -42,4 +42,9 @@ class TestController extends Controller {
         return $str;
     }
 
+    public function sampleMethod() {
+        return dd(__METHOD__);
+    }
+
+
 }
