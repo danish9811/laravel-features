@@ -8,7 +8,7 @@ return new class extends Migration {
     public function up() {
         Schema::create('pens', function (Blueprint $table) {
             $table->id();
-            $table->string('name');
+            $table->string('name', 30);
             $table->float('weight', 2, 2, true);
             $table->string('color')->nullable();
             $table->timestamps();
