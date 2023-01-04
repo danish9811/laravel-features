@@ -8,8 +8,6 @@ use JetBrains\PhpStorm\NoReturn;
 
 class TestController extends Controller {
 
-    private string $letters = 'abcdefghijklmnopqrstuvwxyz0123456789';
-
     /**
      * @throws Exception
      */
