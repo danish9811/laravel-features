@@ -2,9 +2,8 @@
 
 namespace App\Http\Controllers;
 
-use Illuminate\Http\Request;
-
-class PenController extends Controller
-{
-    //
+class PenController extends Controller {
+    public function __invoke() {
+        echo 'Hello from ' . __METHOD__;
+    }
 }
