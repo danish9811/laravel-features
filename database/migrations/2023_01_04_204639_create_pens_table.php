@@ -9,7 +9,7 @@ return new class extends Migration {
         Schema::create('pens', function (Blueprint $table) {
             $table->id();
             $table->string('name', 30);
-            $table->unsignedFloat('weight', 3, 2);
+            $table->unsignedFloat('weight');
             $table->string('color')->nullable();
             $table->timestamps();
         });
