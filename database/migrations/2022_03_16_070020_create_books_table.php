@@ -5,13 +5,9 @@ use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Support\Facades\Schema;
 
 return new class extends Migration {
-    /**
-     * Run the migrations.
-     *
-     * @return void
-     */
-    public function up() {
-        Schema::create('books', function (Blueprint $table) {
+
+    public function up(): void {
+        Schema::create('books', static function (Blueprint $table) {
             $table->id();
             $table->string('title');
             $table->string('author');
@@ -22,12 +18,7 @@ return new class extends Migration {
         });
     }
 
-    /**
-     * Reverse the migrations.
-     *
-     * @return void
-     */
-    public function down() {
+    public function down(): void {
         Schema::dropIfExists('books');
     }
 };
