@@ -15,6 +15,10 @@ class TestController extends Controller {
         dd($this->createHashes());
     }
 
+    public function testHotelBookingQuery() {
+
+    }
+
     /**
      * @throws Exception
      */
