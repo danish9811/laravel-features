@@ -23,7 +23,7 @@ class TestController extends Controller {
     /**
      * @throws Exception
      */
-    private function createHashes() {
+    private function createHashes(): array {
         return [
             Hash::make(random_int(120, 200)),
             Hash::make(random_int(130, 200)),
