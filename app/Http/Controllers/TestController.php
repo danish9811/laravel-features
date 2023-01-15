@@ -12,7 +12,7 @@ class TestController extends Controller {
     /**
      * @throws Exception
      */
-    #[NoReturn] public function showHashes() {
+    #[NoReturn] public function showHashes(): void {
         dd($this->createHashes());
     }
 

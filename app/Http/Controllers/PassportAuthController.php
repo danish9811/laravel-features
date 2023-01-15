@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\Models\User;
+use Illuminate\Http\JsonResponse;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Hash;
 use Illuminate\Support\Facades\Http;
@@ -19,7 +20,7 @@ class PassportAuthController extends Controller {
         return view('register-form');
     }
 
-    public function passportAuthRegisterSubmit(Request $request) {
+    public function passportAuthRegisterSubmit(Request $request): JsonResponse {
         $request->validate([
             'name' => 'required|min:6|max:40|',
             'email' => 'required|email|min:8|max:60|unique:users',
@@ -36,7 +37,7 @@ class PassportAuthController extends Controller {
         ]);
     }
 
-    public function passportAuthLoginSubmit(Request $request) {
+    public function passportAuthLoginSubmit(Request $request): JsonResponse {
         $request->validate([
             'email' => 'required|email|max:60|min:8',
             'password' => 'required|min:6',
@@ -67,6 +68,10 @@ class PassportAuthController extends Controller {
                 "message" => "Password mismatch"
             ]);
         }
+
+        return response()->json([
+            "message" => "User not found", 422
+        ]);
     }
 
     public function showApexChart() {
