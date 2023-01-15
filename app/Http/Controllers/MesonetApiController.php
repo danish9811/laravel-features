@@ -16,7 +16,7 @@ class MesonetApiController extends Controller {
      * <a href="https://api.synopticdata.com/v2/stations/metadata?">https://api.synopticdata.com/v2/stations/metadata?</a> </p>
      * @return JsonResponse
      */
-    public function getMesonetApiResultViaHttp() {
+    public function getMesonetApiResultViaHttp(): JsonResponse {
         try {
             $response = json_decode(
                 Http::get(env('MESONET_API_URL'), [
@@ -39,7 +39,7 @@ class MesonetApiController extends Controller {
      * <a href="https://api.synopticdata.com/v2/stations/metadata?">https://api.synopticdata.com/v2/stations/metadata?</a> </p>
      * @return JsonResponse
      */
-    public function getMesonetApiResultViaOtifCurl() {
+    public function getMesonetApiResultViaOtifCurl(): JsonResponse {
         try {
             $response = json_decode(Curl::Make()
                 ->GET
@@ -64,7 +64,7 @@ class MesonetApiController extends Controller {
      * <a href="https://api.synopticdata.com/v2/stations/metadata?">https://api.synopticdata.com/v2/stations/metadata?</a> </p>
      * @return JsonResponse
      */
-    public function getMesonetApiResultViaCurl() {
+    public function getMesonetApiResultViaCurl(): JsonResponse {
         $curl = curl_init();
         try {
             curl_setopt_array($curl, [

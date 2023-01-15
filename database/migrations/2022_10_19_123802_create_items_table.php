@@ -6,8 +6,8 @@ use Illuminate\Support\Facades\Schema;
 
 return new class extends Migration {
 
-    public function up() {
-        Schema::create('items', function (Blueprint $table) {
+    public function up() : void {
+        Schema::create('items', static function (Blueprint $table) {
             $table->engine = 'myIsam';
             $table->id();
             $table->string('name');
@@ -17,8 +17,7 @@ return new class extends Migration {
         });
     }
 
-
-    public function down() {
+    public function down() : void {
         Schema::dropIfExists('items');
     }
 };
