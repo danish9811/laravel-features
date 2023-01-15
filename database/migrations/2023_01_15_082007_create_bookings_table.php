@@ -9,7 +9,10 @@ return new class extends Migration {
     public function up(): void {
         Schema::create('bookings', static function (Blueprint $table) {
             $table->id();
-            $table->foreignId('hotel_id')->references('id')->on('hotels')->onDelete('cascade');
+            $table->foreignId('hotel_id')
+                ->references('id')
+                ->on('hotels')
+                ->cascadeOnDelete();
             $table->unsignedInteger('count');
             $table->timestamps();
         });
