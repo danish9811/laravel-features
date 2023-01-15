@@ -23,16 +23,15 @@
       <div class="content d-flex flex-column flex-column-fluid" id="kt_content">
         <div id="kt_post" class="post d-flex flex-column-fluid">
 
-          <!-- we can add more classes here and main-container yield here inside -->
         {{--  <div class="card m-auto">--}}
         {{--    <div class="card-body">--}}
         {{--      <div class="row gy-5 g-xl-8">--}}
         {{--        <div class="col-xl-12">--}}
+        {{-- todo : can add more data here --}}
         {{--        </div>--}}
         {{--      </div>--}}
         {{--    </div>--}}
         {{--  </div>--}}
-
 
         <!-- it was here -->
           @yield('main-container')

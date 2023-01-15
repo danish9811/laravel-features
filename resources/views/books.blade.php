@@ -7,10 +7,7 @@
 
 @section('stylesheets')
   <link rel="stylesheet" href="//cdn.datatables.net/1.11.5/css/jquery.dataTables.min.css">
-  <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/toastr.min.css"
-      integrity="sha512-vKMx8UnXk60zUwyUnUPM3HbQo8QfmNx7+ltw8Pm5zLusl1XIfwcxo8DbWCqMGKaWeNxWA8yrx5v3SaVpMvR3CA=="
-      crossorigin="anonymous"
-      referrerpolicy="no-referrer"/>
+  <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/toastr.min.css" />
 @endsection
 
 @section('main-container')
@@ -24,7 +21,6 @@
             <!--begin::Header-->
             <div class="card-header border-0 pt-5">
               <h3 class="card-title align-items-start flex-column">
-                {{-- <span class="card-label fw-bolder fs-3 mb-1">Users Statistics</span>--}}
                 <span class="mt-1 fw-bold fs-7">Total <b>{{ count($books) ?? '0'}}</b> records found</span>
               </h3>
               <div class="card-toolbar" data-bs-toggle="tooltip" data-bs-placement="top" data-bs-trigger="hover" title="" data-bs-original-title="">

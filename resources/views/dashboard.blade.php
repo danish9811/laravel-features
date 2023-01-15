@@ -24,8 +24,3 @@
 
 @endsection
 
-
-<!-- use stack here on the logged in page and show char and js of chart file -->
-<!-- a login, register, with auth, and chart file when user logged in successfully, he will be shown a chart, a static chart -->
-<!-- we will use push here with stacks, some pages where will include the certain js files for modals -->
-
