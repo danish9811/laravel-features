@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\City;
 use Exception;
 use Illuminate\Support\Facades\Hash;
 use JetBrains\PhpStorm\NoReturn;
@@ -16,7 +17,7 @@ class TestController extends Controller {
     }
 
     public function testHotelBookingQuery() {
-
+        return City::get();
     }
 
     /**

@@ -1,6 +1,6 @@
 <?php
 
-use App\Http\Controllers\{PassportAuthController, PenController, SearchController};
+use App\Http\Controllers\{PassportAuthController, PenController, SearchController, TestController};
 use Illuminate\Support\Facades\Route;
 
 Route::get('/', static function () {
@@ -17,5 +17,4 @@ Route::get('/search', [SearchController::class, 'index'])->name('search');
 Route::get('/autocomplete', [SearchController::class, 'autocomplete'])->name('autocomplete');
 Route::get('/pen', PenController::class);
 
-
-
+Route::get('/query-test', [TestController::class, 'testHotelBookingQuery']);
