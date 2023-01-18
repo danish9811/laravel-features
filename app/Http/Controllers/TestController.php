@@ -20,10 +20,6 @@ class TestController extends Controller {
         return City::get();
     }
 
-    private function testMethod() {
-        return 'hello world';
-    }
-
     /**
      * @throws Exception
      */
