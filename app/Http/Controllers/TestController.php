@@ -4,7 +4,6 @@ namespace App\Http\Controllers;
 
 use Exception;
 use Illuminate\Support\Facades\Hash;
-use JetBrains\PhpStorm\NoReturn;
 
 class TestController extends Controller {
 

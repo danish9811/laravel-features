@@ -6,6 +6,7 @@ use Illuminate\Foundation\Support\Providers\AuthServiceProvider as ServiceProvid
 use Laravel\Passport\Passport;
 
 class AuthServiceProvider extends ServiceProvider {
+
     /**
      * The policy mappings for the application.
      *

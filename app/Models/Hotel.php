@@ -8,6 +8,7 @@ use Illuminate\Database\Eloquent\Relations\BelongsTo;
 use Illuminate\Database\Eloquent\Relations\HasMany;
 
 class Hotel extends Model {
+
     use HasFactory;
 
     protected $fillable = ['id'];

@@ -7,6 +7,7 @@ use Illuminate\Database\Eloquent\Model;
 use JetBrains\PhpStorm\ArrayShape;
 
 class Pen extends Model {
+
     use HasFactory;
 
     protected $guarded = ['id'];
