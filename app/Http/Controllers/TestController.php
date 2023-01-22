@@ -2,22 +2,14 @@
 
 namespace App\Http\Controllers;
 
-use App\Models\City;
 use Exception;
 use Illuminate\Support\Facades\Hash;
 use JetBrains\PhpStorm\NoReturn;
 
 class TestController extends Controller {
 
-    /**
-     * @throws Exception
-     */
-    #[NoReturn] public function showHashes(): void {
-        dd($this->createHashes());
-    }
-
     public function testHotelBookingQuery() {
-        return City::get();
+
     }
 
     /**
