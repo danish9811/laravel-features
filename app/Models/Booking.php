@@ -7,6 +7,7 @@ use Illuminate\Database\Eloquent\Model;
 use Illuminate\Database\Eloquent\Relations\BelongsTo;
 
 class Booking extends Model {
+
     use HasFactory;
 
     protected $fillable = ['id'];

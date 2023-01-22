@@ -6,7 +6,7 @@ use Illuminate\Support\Facades\Schema;
 
 return new class extends Migration {
 
-    public function up() : void {
+    public function up(): void {
         Schema::create('items', static function (Blueprint $table) {
             $table->engine = 'myIsam';
             $table->id();
@@ -17,7 +17,7 @@ return new class extends Migration {
         });
     }
 
-    public function down() : void {
+    public function down(): void {
         Schema::dropIfExists('items');
     }
 };
