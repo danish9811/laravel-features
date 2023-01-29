@@ -11,7 +11,7 @@ return new class extends Migration {
             $table->id();
             $table->string('title');
             $table->string('author');
-            $table->string('publisher_id')->unique();
+            $table->string('publisher_id');
             $table->string('isbn')->unique();
             $table->float('price');
             $table->timestamps();
