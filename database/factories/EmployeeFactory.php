@@ -3,7 +3,6 @@
 namespace Database\Factories;
 
 use Illuminate\Database\Eloquent\Factories\Factory;
-use Illuminate\Support\Carbon;
 
 /**
  * @extends \Illuminate\Database\Eloquent\Factories\Factory<\App\Models\Employee>
@@ -19,10 +18,8 @@ class EmployeeFactory extends Factory {
         return [
             'name' => $this->faker->name(),
             'age' => $this->faker->numberBetween(20, 40),
-            'job' => $this->faker->jobTitle(),
-            'salary' => $this->faker->numberBetween(20000, 90000),
-            'created_at' => Carbon::now(),
-            'updated_at' => Carbon::now(),
+            'job_title' => $this->faker->jobTitle(),
+            'salary' => $this->faker->numberBetween(20000, 90000)
         ];
     }
 

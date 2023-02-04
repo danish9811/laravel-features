@@ -13,8 +13,8 @@ class ItemFactory extends Factory {
     public function definition(): array {
         return [
             'name' => $this->faker->name(),
-            'weight' => $this->faker->randomFloat(2, 2,2),
-            'volume' => $this->faker->randomFloat(2, 2,2),
+            'weight' => $this->faker->randomFloat(2, 20,99),
+            'volume' => $this->faker->randomFloat(2, 20,99),
         ];
     }
 }
