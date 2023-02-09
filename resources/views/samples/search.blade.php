@@ -9,7 +9,7 @@
 <body>
 
 <div class="container">
-    <h1>Laravel 6 Autocomplete Search using Bootstrap Typeahead JS - ItSolutionStuff.com</h1>
+    <h1>Laravel Search using ajax</h1>
     <input class="typeahead form-control" type="text">
 </div>
 

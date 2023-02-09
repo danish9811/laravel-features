@@ -19,7 +19,7 @@ class BookFactory extends Factory {
 
             'title' => $this->faker->title(),
             'author' => $this->faker->name(),
-            'publisher_id' => $this->faker->randomNumber(4),
+            'publisher_id' => $this->faker->unique()->randomNumber(4),
             'isbn' => $this->faker->isbn13(),
             'price' => $this->faker->randomFloat(2, 20, 90)
 
