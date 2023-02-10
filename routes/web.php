@@ -24,7 +24,7 @@ Route::get('/chart', [PassportAuthController::class, 'showApexChart'])->middlewa
 
 // implementing search feature
 Route::get('/search', [SearchController::class, 'index'])->name('search');
-Route::get('/autocomplete', 'autocomplete')->name('autocomplete');
+Route::get('/autocomplete', [SearchController::class, 'autocomplete'])->name('autocomplete');
 
 // single action controller
 Route::get('/pen', PenController::class);
